@@ -1,11 +1,14 @@
+const xpoints = [];
+const ypoints = [];
 
-const xCoord = [];
-const yCoord = [];
+//push points here-> before graph
 
-var graph = {
-  x: xCoord,
-  y: yCoord,
-  type: "scatter"
+var trace1 = {
+  x: xpoints,
+  y: ypoints,
+  type: 'scatter'
 };
 
-Plotly.newPlot("myDiv", graph);
+var data = [trace1];
+
+Plotly.newPlot("graph", data);
