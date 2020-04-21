@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- <title>[insert title]</title>
-    <link rel="shortcut icon" href="[shortcut icon]" /> -->
+		<!-- all images used were liscenced for reuse with modification -->
+		<!-- remember to cite images and plot.ly -->
+
+		 <title>population modeling with the logistic curve model</title>
+    <link rel="shortcut icon" href="images/logistic-curve.png" />
 
 		<link rel="stylesheet" href="styles/styles.css" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -12,6 +15,8 @@
 
 	<body>
 			<h1>population modeling with the logistic curve model</h1>
+
+			<!-- fix below description -->
 			<p>given dy/dt = ky(1-y/M), the logistics differential equation,
 				general solution is y = M/(1 + be^(-Mkt)), where M is the carrying
 				capacity, b is a constant that controls where the curve
@@ -20,6 +25,11 @@
 					such as carrying capacity and initial population. given 3/4
 					of the variables, it is possible to solve and graph this
 					curve, which is what this program does.</p>
+
+				<!-- make it accept variables and possibly raw data -->
+				<h2>carrying capacity: </h2>
+				<input type="text" id="capacity" value="">
 				<div id="graph"></div>
+
 		</body>
 </html>
