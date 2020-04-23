@@ -1,3 +1,7 @@
+function carryingCapacity() {
+    var capacityValue = document.getElementById("capacity").value;
+}
+
 const xpoints = [];
 const ypoints = [];
 
