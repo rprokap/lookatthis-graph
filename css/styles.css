@@ -1,9 +1,13 @@
 * {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 ul, li {
     list-style-type: none;
+    margin-top: 50px;
+    margin-left: -20px;
 }
+
+/* fix p formatting so when full screen it doesnt look overwhelmingly long and disorganized */
