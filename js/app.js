@@ -2,6 +2,16 @@ function carryingCapacity() {
     var capacityValue = document.getElementById("capacity").value;
 }
 
+const addVar = function() {
+  //stuff
+};
+
+document.addEventListener("keyup", function(pressEnter) {
+  if (pressEnter.keyCode == 13) {
+  addVar();
+  }
+});
+
 const xpoints = [];
 const ypoints = [];
 
