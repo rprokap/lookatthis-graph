@@ -4,7 +4,9 @@
 		<!-- all images used were liscenced for reuse with modification -->
 		<!-- remember to cite images and plot.ly -->
 
-		 <title>population modeling with the logistic curve model</title>
+		<!-- add different applications of the logistic curve graph on different pages -->
+
+		<title>population modeling with the logistic curve model</title>
     <link rel="shortcut icon" href="images/logistic-curve.png" />
 
 		<link rel="stylesheet" href="styles/styles.css" />
@@ -33,6 +35,27 @@
 					<input type="text" id="capacity" value="">
 					<button type="button" onclick="carryingCapacity()"> submit
 	      	</button></li>
+
+					<li><h2>current population: </h2>
+					<input type="text" id="currentpop" value="">
+					<button type="button" onclick="currentPop()"> submit
+	      	</button></li>
+
+					<li><h2>current population year: </h2>
+					<input type="text" id="currentpopyear" value="">
+					<button type="button" onclick="currentPopYear()"> submit
+	      	</button></li>
+
+					<li><h2>past population: </h2>
+					<input type="text" id="pastpop" value="">
+					<button type="button" onclick="pastPop()"> submit
+	      	</button></li>
+
+					<li><h2>past population year: </h2>
+					<input type="text" id="pastpopyear" value="">
+					<button type="button" onclick="pastPopYear()"> submit
+	      	</button></li>
+
 					<!-- make it so that pressing enter works too -->
 				</ul>
 				<div id="graph"></div>
