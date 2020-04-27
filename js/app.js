@@ -6,6 +6,7 @@ const addVar = function() {
   //stuff
 };
 
+// pressing enter function make it work
 document.addEventListener("keyup", function(pressEnter) {
   if (pressEnter.keyCode == 13) {
   addVar();
