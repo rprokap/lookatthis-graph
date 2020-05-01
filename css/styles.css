@@ -7,7 +7,12 @@
 ul, li {
     list-style-type: none;
     margin-top: 50px;
-    margin-left: -20px;
+    margin-left: 0px;
+    padding: 0;
+}
+
+.horizontal-display li {
+  display: inline-block;
 }
 
 /* fix p formatting so when full screen it doesnt look overwhelmingly long and disorganized */

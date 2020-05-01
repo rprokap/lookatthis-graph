@@ -30,11 +30,15 @@
 
 				<!-- make it accept variables and possibly raw data -->
 				<!-- use c  s     s to make them next to each other (horizontally aligned) -->
-				<ul id = "horizontal-display">
+				<ul class = "horizontal-display">
 					<li><h2>carrying capacity: </h2>
 					<input type="text" id="capacity" value="">
 					<button type="button" onclick="carryingCapacity()"> submit
-	      	</button></li>
+	      	</button>
+					<!-- <div class="explanation">
+    				<p>Type and submit the carrying capacity for the populationxs.</p>
+					</div> -->
+					</li>
 
 					<li><h2>current population: </h2>
 					<input type="text" id="currentpop" value="">
@@ -55,7 +59,11 @@
 					<input type="text" id="pastpopyear" value="">
 					<button type="button" onclick="pastPopYear()"> submit
 	      	</button></li>
+
+					<li>
+						<!-- put confirmed items here (Carrying capacity: 1, etc) -->
+					</li>
 				</ul>
-				<div id="graph"></div>
+				<center><div id="graph"></div></center>
 		</body>
 </html>
