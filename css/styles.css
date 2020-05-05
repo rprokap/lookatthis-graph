@@ -15,4 +15,9 @@ ul, li {
   display: inline-block;
 }
 
+#graph {
+  width: 950px;
+  height: 600px;
+}
+
 /* fix p formatting so when full screen it doesnt look overwhelmingly long and disorganized */
