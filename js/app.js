@@ -6,7 +6,7 @@ const addVar = function() {
   //stuff
 };
 
-// pressing enter function make it work
+// pressing enter function make it work -> necessary ?
 document.addEventListener("keyup", function(pressEnter) {
   if (pressEnter.keyCode == 13) {
   addVar();
@@ -16,7 +16,7 @@ document.addEventListener("keyup", function(pressEnter) {
 const xpoints = [];
 const ypoints = [];
 
-//push points here-> before graph
+//push points to arrays here-> before graph
 
 var trace1 = {
   x: xpoints,
