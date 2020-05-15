@@ -2,9 +2,8 @@
 <html>
 	<head>
 		<!-- all images used were liscenced for reuse with modification -->
-		<!-- remember to cite images and plot.ly -->
-
-		<!-- add different applications of the logistic curve graph on different pages -->
+		<!-- shortcut icon retrieved from https://en.wikipedia.org/wiki/Logistic_function -->
+		<!-- all plotly resources were retrieved from https://plotly.com/javascript/ and were used for graphing -->
 
 		<title>population modeling with the logistic curve model</title>
     <link rel="shortcut icon" href="images/logistic-curve.png" />
@@ -18,26 +17,22 @@
 	<body>
 			<h1>population modeling with the logistic curve model</h1>
 
-			<!-- fix below description -->
-			<p>given dy/dt = ky(1-y/M), the logistics differential equation,
-				general solution is y = M/(1 + be^(-Mkt)), where M is the carrying
-				capacity, b is a constant that controls where the curve
-				crosses the y axis, and a = M/(1+b), or the initial value/y-intercept.
-				this can be applied to many contexts, especially in
-					such as carrying capacity and initial population. given 3/4
-					of the variables, it is possible to solve and graph this
-					curve, which is what this program does.</p>
+			<p> given dy/dt = ky(1-y/M), the logistics differential equation, general
+					solution is y = M/(1 + be^(-Mkt)), where M is the carrying capacity, b
+					is a constant that controls where the curve crosses the y axis, and a
+					= M/(1+b), or the initial value/y-intercept.this can be applied to
+					many contexts, especially in such as carrying capacity and initial
+					population. given the variables, it is possible to solve for and graph
+					this curve, which is what this website does. (NOTE: "past population"
+					and "current population" refer to the less recent and more recent
+					populations, respectively, not necessarily one from the past and the
+					current one.)</p>
 
-				<!-- make it accept variables and possibly raw data -->
-				<!-- use c  s     s to make them next to each other (horizontally aligned) -->
 				<ul class = "horizontal-display">
 					<li><h2>carrying capacity: </h2>
 					<input type="text" id="capacity" value="">
 					<button type="button" onclick="carryingCapacity()"> submit
 	      	</button>
-					<!-- <div class="explanation">
-    				<p>Type and submit the carrying capacity for the populationxs.</p>
-					</div> -->
 					</li>
 
 					<li><h2>current population: </h2>
@@ -60,9 +55,9 @@
 					<button type="button" onclick="pastPopYear()"> submit
 	      	</button></li>
 
-					<li>
-						<!-- put confirmed items here (Carrying capacity: 1, etc) -->
-					</li>
+					<li> <button type = "button" id = "goGraph"> graph logistic curve
+	      	</button></li>
+
 				</ul>
 				<center><div id="graph"></div></center>
 		</body>
