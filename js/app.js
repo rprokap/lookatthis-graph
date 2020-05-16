@@ -1,4 +1,4 @@
-// <!-- all images used were liscenced for reuse with modification -->
+// <!-- all images used were licensed for reuse with modification -->
 // <!-- shortcut icon retrieved from https://en.wikipedia.org/wiki/Logistic_function -->
 // <!-- all plotly resources were retrieved from https://plotly.com/javascript/ and were used for graphing -->
 
@@ -51,7 +51,7 @@ window.onload = function() {
 const xpoints = [];
 const ypoints = [];
 
-const logCalculation = function() {
+function logCalculation() {
   const kCalculation = function() {
     yearDiff = currentPopYear - pastPopYear;
     eExp = currentValue * yearDiff;
@@ -72,7 +72,7 @@ const logCalculation = function() {
       ypoints.push(eqSolution);
     }
   };
-};
+}
 
 //push points to arrays here-> before graph
 // xpoints.push(1, 2, 3, 4);
