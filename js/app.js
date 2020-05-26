@@ -1,78 +1,54 @@
 // <!-- all images used were licensed for reuse with modification -->
 // <!-- shortcut icon retrieved from https://en.wikipedia.org/wiki/Logistic_function -->
 // <!-- all plotly resources were retrieved from https://plotly.com/javascript/ and were used for graphing -->
+// information on the earth's carrying capacity was retrieved from LiveScience at www.livescience.com/16493-people-planet-earth-support.html.
 
+// 7.550 billion on July 1, 2017 and
+// 9.633 billion on July 1, 2018
+// carrying capacity 9.5 billion
+
+let y0 = 7.550;
+let y = 7.633;
+let t = 1;
+let m = 9.5;
+let numerator;
+let numdivy;
+let divoriginal;
+let capacitydiff;
+let prelog;
+let exp;
+let log;
 let k;
-let yearDiff;
-let eExp;
-let ppvCv;
-let cvPpv;
-let step5;
-let step6;
-let lnStep6;
-let kCv;
-let eqSolution;
-let timeDiff;
-
-function carryingCapacity() {
-    var capacityValue = document.getElementById("capacity").value;
-}
-
-function currentPop() {
-    var currentPopValue = document.getElementById("currentpop").value;
-}
-
-function currentPopYear() {
-    var currentPopYear = document.getElementById("currentpopyear").value;
-}
-
-function pastPop() {
-    var pastPopValue = document.getElementById("pastpop").value;
-}
-
-function pastPopYear() {
-    var pastPopYear = document.getElementById("pastpopyear").value;
-}
 
 window.onload = function() {
-  document.getElementById("goGraph").onclick = logCalculation;
+  kCalculation();
+  pointCalculation();
 };
 
-//  currentPopValue = (pastPopValue * capacityValue)
-//  /[pastPopValue + (capacityValue - pastPopValue)*e^(k*capacityValue*(currentPopYear - pastPopYear))]
-
-// values for testing/examples
-// carrying capacity: 9.5
-// current population: 7.55
-// current population year: 2018
-// past population: 7.633
-// past population year: 2017
-
-const xpoints = [];
-const ypoints = [];
-
-function logCalculation() {
-  const kCalculation = function() {
-    yearDiff = currentPopYear - pastPopYear;
-    eExp = currentValue * yearDiff;
-    ppvCv = pastPopValue * capacityValue;
-    cvPpv = capacityValue - pastPopValue;
-    step5 = ppvCv / currentPopValue;
-    step6 = step5 - pastPopValue;
-    lnStep6 = Math.log(step6);
-    k = -lnStep6 / eExp;
-  };
-
-  const ySimplify = function() {
-    kCv = k * capacityValue;
-    for (let i = pastPopYear + 1; i < pastPopYear + 100; i += 10) {
-      xpoints.push(i);
-      timeDiff = i - pastPopYear;
-      eqSolution = (ppvCv/(pastPopValue + (cvPpv * e^(-k * kCv))));
-      ypoints.push(eqSolution);
-    }
-  };
+//function to solve for k
+function kCalculation() {
+  exp = -m * t;
+  numerator = y0 * m;
+  numdivy = numerator / y;
+  divoriginal = numdivy - y0;
+  capacitydiff = m - y0;
+  prelog = divoriginal / capacitydiff;
+  log = Math.log(prelog);
+  k = log / exp;
 }
+
+// function to solve for points with k
+function pointCalculation() {
+  //stuff
+}
+
+let xpoints = [];
+let ypoints = [];
+
+xpoints.forEach(function (i) {
+    pointCalculation(i);
+    ypoints.push(i);
+});
 
 //push points to arrays here-> before graph
 // xpoints.push(1, 2, 3, 4);

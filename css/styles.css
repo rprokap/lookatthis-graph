@@ -1,23 +1,12 @@
 /* <!-- all images used were licensed for reuse with modification -->
 <!-- shortcut icon retrieved from https://en.wikipedia.org/wiki/Logistic_function -->
 <!-- all plotly resources were retrieved from https://plotly.com/javascript/ and were used for graphing --> */
-
+/* information on the earth's carrying capacity was retrieved from LiveScience at www.livescience.com/16493-people-planet-earth-support.html. */
 
 * {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin-left: 20px;
   margin-right: 50px;
-}
-
-ul, li {
-    list-style-type: none;
-    margin-top: 50px;
-    margin-left: 0px;
-    padding: 0;
-}
-
-.horizontal-display li {
-  display: inline-block;
 }
 
 #graph {

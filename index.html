@@ -4,6 +4,7 @@
 		<!-- all images used were licensced for reuse with modification -->
 		<!-- shortcut icon retrieved from https://en.wikipedia.org/wiki/Logistic_function -->
 		<!-- all plotly resources were retrieved from https://plotly.com/javascript/ and were used for graphing -->
+		<!-- information on the earth's carrying capacity was retrieved from LiveScience at www.livescience.com/16493-people-planet-earth-support.html. -->
 
 		<title>population modeling with the logistic curve model</title>
     <link rel="shortcut icon" href="images/logistic-curve.png" />
@@ -22,43 +23,24 @@
 					is a constant that controls where the curve crosses the y axis, and a
 					= M/(1+b), or the initial value/y-intercept.this can be applied to
 					many contexts, especially in such as carrying capacity and initial
-					population. given the variables, it is possible to solve for and graph
-					this curve, which is what this website does. (NOTE: "past population"
-					and "current population" refer to the less recent and more recent
-					populations, respectively, not necessarily one from the past and the
-					current one.)</p>
+					population. this program graphs the approximate population growth of
+					the human population on earth according to the logistic curve
+					approximation. </p>
 
-				<ul class = "horizontal-display">
-					<li><h2>carrying capacity: </h2>
-					<input type="text" id="capacity" value="">
-					<button type="button" onclick="carryingCapacity()"> submit
-	      	</button>
-					</li>
+					<br>
 
-					<li><h2>current population: </h2>
-					<input type="text" id="currentpop" value="">
-					<button type="button" onclick="currentPop()"> submit
-	      	</button></li>
+			<p>In an instance with limited resources such as this one, the differential
+				equation dy/dt = ky(M-y) is used. y_0 is the initial population, y is the
+				population after t years, M is the carrying capacity, and k is a specific
+				constant utilized in modeling the growth rate. The solution of this
+				differential equation is y = (y_0*M)/(y_0 + (M-y_0)*e^(-k*M*t)). With
+				the data that the earth's human population was approximately 7.550 billion
+				on July 1, 2017 and 9.633 billion on July 1, 2018, and that the carrying
+				capacity is estimated to be approximately 9.5 billion, the k constant
+				can be solved. With this, the population approximations for various
+				years can be determined.</p>
 
-					<li><h2>current population year: </h2>
-					<input type="text" id="currentpopyear" value="">
-					<button type="button" onclick="currentPopYear()"> submit
-	      	</button></li>
+			<center><div id="graph"></div></center>
 
-					<li><h2>past population: </h2>
-					<input type="text" id="pastpop" value="">
-					<button type="button" onclick="pastPop()"> submit
-	      	</button></li>
-
-					<li><h2>past population year: </h2>
-					<input type="text" id="pastpopyear" value="">
-					<button type="button" onclick="pastPopYear()"> submit
-	      	</button></li>
-
-					<li> <button type = "button" id = "goGraph"> graph logistic curve
-	      	</button></li>
-
-				</ul>
-				<center><div id="graph"></div></center>
 		</body>
 </html>
