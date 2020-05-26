@@ -12,4 +12,20 @@
 #graph {
   width: 950px;
   height: 600px;
+  margin-left: -50px;
+}
+
+#button {
+  font-size: 36px;
+  background-color: rgb(255, 97, 123);
+  border-radius: 10px;
+}
+
+#button:hover {
+  background-color: rgb(124, 179, 252);
+}
+
+.pressed {
+  opacity: .5;
+  cursor: not-allowed;
 }

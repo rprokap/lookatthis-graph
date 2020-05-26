@@ -40,7 +40,7 @@ function kCalculation() {
 }
 
 function xCoords() {
-  for (let i = 2020; i <= 2250; i += 10) {
+  for (let i = 2020; i <= 2250; i ++) {
     xpoints.push(i);
     ypoints.push(numerator / (y0 + (capacitydiff * Math.exp(-k * m * (i - 2017)))));
   }
@@ -80,4 +80,7 @@ var aesthetics = {
   }
 };
 
-Plotly.newPlot("graph", data, aesthetics);
+function graphData() {
+  Plotly.newPlot("graph", data, aesthetics);
+  button.classList.add("pressed");
+}
