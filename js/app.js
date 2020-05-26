@@ -6,6 +6,8 @@
 // 7.550 billion on July 1, 2017 and
 // 9.633 billion on July 1, 2018
 // carrying capacity 9.5 billion
+let xpoints = [];
+let ypoints = [];
 
 let y0 = 7.550;
 let y = 7.633;
@@ -19,11 +21,7 @@ let prelog;
 let exp;
 let log;
 let k;
-
-window.onload = function() {
-  kCalculation();
-  pointCalculation();
-};
+let ypoint;
 
 //function to solve for k
 function kCalculation() {
@@ -35,31 +33,51 @@ function kCalculation() {
   prelog = divoriginal / capacitydiff;
   log = Math.log(prelog);
   k = log / exp;
+
+  // test:
+  // alert(k);
+  // kCalculation is accurate and displays the correct value
 }
 
-// function to solve for points with k
-function pointCalculation() {
-  //stuff
+function xCoords() {
+  for (let i = 2020; i <= 2250; i += 10) {
+    xpoints.push(i);
+    ypoints.push(numerator / (y0 + (capacitydiff * Math.exp(-k * m * (i - 2017)))));
+  }
 }
 
-let xpoints = [];
-let ypoints = [];
+kCalculation();
+xCoords();
 
-xpoints.forEach(function (i) {
-    pointCalculation(i);
-    ypoints.push(i);
-});
+// alert(k);
+// alert(xpoints);
+// test successful
 
 //push points to arrays here-> before graph
 // xpoints.push(1, 2, 3, 4);
 // ypoints.push(2, 4, 6, 8);
 
+// syntax for plotly functions (below) was learned from the plotly line chart tutorial at https://plotly.com/javascript/line-charts/
+
 var trace1 = {
   x: xpoints,
   y: ypoints,
+  marker: {
+    color: 'rgb(255, 97, 123)',
+  },
   type: 'scatter'
 };
 
 var data = [trace1];
 
-Plotly.newPlot("graph", data);
+var aesthetics = {
+  title: 'Population Growth Over Time',
+  xaxis: {
+    title: 'Year'
+  },
+  yaxis: {
+    title: 'Population (billions)'
+  }
+};
+
+Plotly.newPlot("graph", data, aesthetics);
